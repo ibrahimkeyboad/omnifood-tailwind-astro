@@ -1,0 +1,48 @@
+---
+import Steps from './Steps.astro';
+const steps = [
+  {
+    stepNumber: '01',
+    title: 'Tell us what you like (and what not)',
+    description: `  Never again waste time thinking about what to eat! Omnifood AI will
+        create a 100% personalized weekly meal plan just for you. It makes sure
+        you get all the nutrients and vitamins you need, no matter what diet you
+        follow!`,
+  },
+  {
+    stepNumber: '02',
+    title: 'Approve your weekly meal plan',
+    description: `  Once per week, approve the meal plan generated for you by Omnifood AI.
+        You can change ingredients, swap entire meals, or even add your own
+        recipes.`,
+  },
+  {
+    stepNumber: '03',
+    title: 'Receive meals at convenient time',
+    description: `  Best chefs in town will cook your selected meal every day, and we will
+        deliver it to your door whenever works best for you. You can change
+        delivery schedule and address daily!`,
+  },
+];
+---
+
+<section class='py-[9.6rem]' id='how'>
+  <div class='container'>
+    <span class='subheading'>How it works</span>
+    <h2 class='heading-secondary'>
+      Your daily dose of health in 3 simple steps
+    </h2>
+  </div>
+
+  <div class='container grid grid--2-cols grid--center-v'>
+    {
+      steps.map((step) => (
+        <Steps
+          title={step.title}
+          stepNumber={step.stepNumber}
+          description={step.description}
+        />
+      ))
+    }
+  </div>
+</section>

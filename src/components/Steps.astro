@@ -1,0 +1,78 @@
+---
+interface Props {
+  title: string;
+  stepNumber: string;
+  description: string;
+}
+
+const { title, stepNumber, description } = Astro.props;
+
+const extraClass = stepNumber === '02';
+---
+
+<div
+  class={`step-text-box relative ${
+    extraClass === true ? 'right-0' : 'left-0'
+  } `}
+>
+  <p class='text-[8.6rem] font-semibold text-[#ddd] mb-[1.2rem]'>
+    {stepNumber}
+  </p>
+  <h3 class='heading-tertiary'>{title}</h3>
+  <p class='text-[1.8rem] leading-[1.8]'>
+    {description}
+  </p>
+</div>
+
+<div class={`step-img-box ${extraClass === true ? 'left-0' : 'right-0'} `}>
+  <img
+    src='/img/app/app-screen-2.png'
+    class='step-img'
+    alt='iPhone app
+  meal approving plan screen'
+  />
+</div>
+
+<style>
+  .step-img-box {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .step-img-box::before,
+  .step-img-box::after {
+    content: '';
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .step-img-box::before {
+    width: 60%;
+    /* height: 60%; */
+
+    /* 60% of parent's width */
+    padding-bottom: 60%;
+
+    background-color: #fdf2e9;
+    z-index: -2;
+  }
+
+  .step-img-box::after {
+    width: 45%;
+    padding-bottom: 45%;
+    background-color: #fae5d3;
+    z-index: -1;
+  }
+
+  .step-img {
+    width: 35%;
+    /* z-index: 10; */
+  }
+</style>
