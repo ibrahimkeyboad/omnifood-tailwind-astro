@@ -1,0 +1,59 @@
+---
+import MealAttribute from './MealAttribute.astro';
+
+export interface Props {
+  image: {
+    src: string;
+    alt: string;
+  };
+  mealTags: string[];
+  mealTitle: string;
+  mealAttributes: [
+    {
+      title: string;
+      amount: number;
+      isLeft?: boolean;
+      iconName: string;
+    },
+  ];
+}
+
+const { mealAttributes, mealTags, mealTitle, image } = Astro.props;
+---
+
+<div
+  class='shadow-xl rounded-xl overflow-hidden transition-all hover:-translate-y-[1.2rem] hover:shadow-2xl'
+>
+  <img src={image.src} class='w-full' alt={image.alt} />
+  <div class='pt-[3.2rem] px-[4.8rem] pb-[4.8rem]'>
+    <div class='mb-[1.2rem] flex gap-[0.4rem]'>
+      {
+        mealTags.map((tag) => (
+          <span
+            class={`inline-block py-[0.4rem] px-[0.8rem] text-[1.2rem] uppercase text-[#333] rounded-full font-semibold ${
+              (tag === 'Vegan' && 'bg-[#94d82d]') ||
+              (tag === 'Paleo' && 'bg-[#ffd43b]') ||
+              (tag === 'Vegetarian' && 'bg-[#51cf66]')
+            }`}>
+            {tag}
+          </span>
+        ))
+      }
+    </div>
+    <p class='text-[2.4rem] text-[#333] font-semibold mb-[3.2rem]'>
+      {mealTitle}
+    </p>
+    <ul class='flex gap-[2rem] flex-col'>
+      {
+        mealAttributes.map((item) => (
+          <MealAttribute
+            title={item.title}
+            amount={item.amount}
+            isLeft={item.isLeft}
+            iconName={item.iconName}
+          />
+        ))
+      }
+    </ul>
+  </div>
+</div>

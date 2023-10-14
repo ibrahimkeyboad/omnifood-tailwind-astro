@@ -7,14 +7,23 @@ interface Props {
 
 const { title, stepNumber, description } = Astro.props;
 
-const extraClass = stepNumber === '02';
+const isTrue = stepNumber === '02';
 ---
 
-<div
-  class={`step-text-box relative ${
-    extraClass === true ? 'right-0' : 'left-0'
-  } `}
->
+{
+  isTrue && (
+    <div class='step-img-box'>
+      <img
+        src='/img/app/app-screen-2.png'
+        class='step-img'
+        alt='iPhone app
+  meal approving plan screen'
+      />
+    </div>
+  )
+}
+
+<div class='step-text-box'>
   <p class='text-[8.6rem] font-semibold text-[#ddd] mb-[1.2rem]'>
     {stepNumber}
   </p>
@@ -24,14 +33,18 @@ const extraClass = stepNumber === '02';
   </p>
 </div>
 
-<div class={`step-img-box ${extraClass === true ? 'left-0' : 'right-0'} `}>
-  <img
-    src='/img/app/app-screen-2.png'
-    class='step-img'
-    alt='iPhone app
+{
+  !isTrue && (
+    <div class='step-img-box'>
+      <img
+        src='/img/app/app-screen-2.png'
+        class='step-img'
+        alt='iPhone app
   meal approving plan screen'
-  />
-</div>
+      />
+    </div>
+  )
+}
 
 <style>
   .step-img-box {
