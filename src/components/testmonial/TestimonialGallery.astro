@@ -1,0 +1,66 @@
+---
+const images=[
+ ,
+  'img/gallery/gallery-1.jpg'
+
+ ,
+  'img/gallery/gallery-2.jpg'
+
+ ,
+ 
+  'img/gallery/gallery-3.jpg'
+
+ ,
+ 
+  'img/gallery/gallery-4.jpg'
+
+ ,
+ 
+  'img/gallery/gallery-5.jpg'
+
+ ,
+ 
+  'img/gallery/gallery-6.jpg'
+
+ ,
+ 
+  'img/gallery/gallery-7.jpg'
+
+ ,
+ 
+  'img/gallery/gallery-8.jpg'
+
+ ,
+ 
+  'img/gallery/gallery-9.jpg'
+,
+ 
+  'img/gallery/gallery-10.jpg'
+,
+ 
+  'img/gallery/gallery-11.jpg'
+,
+ 
+  'img/gallery/gallery-12.jpg'
+
+  
+
+]
+---
+
+<div class='grid grid-cols-3 gap-[1.6rem] p-[1.6rem]'>
+
+  {images.map(img=>  <figure class='overflow-hidden'>
+    <img
+      class='block w-full transition-all duration-75'
+      src={img}
+      alt='Photo of beautifully arranged food'
+    />
+    <!-- <figcaption>Caption</figcaption> -->
+  </figure>)}
+
+
+
+
+ 
+</div>

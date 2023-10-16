@@ -1,0 +1,25 @@
+---
+interface Props {
+  image: {
+    src: string;
+    alt: string;
+  };
+
+  desc: string;
+  name: string;
+}
+
+const { desc, image, name } = Astro.props;
+---
+
+<figure class='testimonial'>
+  <img
+    class='w-[6rem] rounded-full mb-[1.2rem]'
+    alt={image.alt}
+    src={image.src}
+  />
+  <blockquote class='text-[1.8rem] leading-[1.8] mb-[1.6rem]'>
+    {desc}
+  </blockquote>
+  <p class='text-[1.6rem] text-[#6f6f6f]'>&mdash; {name}</p>
+</figure>
