@@ -1,3 +1,7 @@
+---
+import { Image } from 'astro:assets';
+---
+
 <section class='bg-[#fdf2ed] pt-[4.8rem] pb-[9.6rem]'>
   <div
     class='max-w-[130rem] m-auto px-[3.2rem] grid grid-cols-2 gap-[9.6rem] items-center'
@@ -57,7 +61,9 @@
         <source srcset='/img/hero.webp' type='image/webp' />
         <source srcset='/img/hero-min.png' type='image/png' />
 
-        <img
+        <Image
+          width={600}
+          height={600}
           src='/img/hero-min.png'
           class='w-full'
           alt='Woman enjoying food, meals in storage container, and food bowls on a table'
@@ -66,3 +72,29 @@
     </div>
   </div>
 </section>
+
+<script>
+  const sectionHeroEl = document.querySelector('.section-hero');
+
+  const obs = new IntersectionObserver(
+    function (entries) {
+      const ent = entries[0];
+      console.log(ent);
+
+      if (ent.isIntersecting === false) {
+        document.body.classList.add('sticky');
+      }
+
+      if (ent.isIntersecting === true) {
+        document.body.classList.remove('sticky');
+      }
+    },
+    {
+      // In the viewport
+      root: null,
+      threshold: 0,
+      rootMargin: '-80px',
+    }
+  );
+  obs.observe(sectionHeroEl);
+</script>
