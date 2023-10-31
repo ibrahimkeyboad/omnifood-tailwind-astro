@@ -75,6 +75,12 @@
   </div>
 </footer>
 
+<script>
+  const yearEl = document.querySelector('.year') as HTMLParagraphElement;
+  const currentYear = new Date().getFullYear();
+  yearEl.textContent = `${currentYear}`;
+</script>
+
 <style>
   .footer {
     padding: 12.8rem 0;
