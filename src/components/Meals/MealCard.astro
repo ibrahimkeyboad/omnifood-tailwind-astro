@@ -21,12 +21,10 @@ export interface Props {
 const { mealAttributes, mealTags, mealTitle, image } = Astro.props;
 ---
 
-<div
-  class='shadow-xl rounded-xl overflow-hidden transition-all hover:-translate-y-[1.2rem] hover:shadow-2xl'
->
-  <img src={image.src} class='w-full' alt={image.alt} />
-  <div class='pt-[3.2rem] px-[4.8rem] pb-[4.8rem]'>
-    <div class='mb-[1.2rem] flex gap-[0.4rem]'>
+<div class='meal'>
+  <img src={image.src} class='meal-img' alt={image.alt} />
+  <div class='meal-content'>
+    <div class='meal-tags'>
       {
         mealTags.map((tag) => (
           <span
@@ -40,10 +38,10 @@ const { mealAttributes, mealTags, mealTitle, image } = Astro.props;
         ))
       }
     </div>
-    <p class='text-[2.4rem] text-[#333] font-semibold mb-[3.2rem]'>
+    <p class='meal-title'>
       {mealTitle}
     </p>
-    <ul class='flex gap-[2rem] flex-col'>
+    <ul class='meal-attribute'>
       {
         mealAttributes.map((item) => (
           <MealAttribute

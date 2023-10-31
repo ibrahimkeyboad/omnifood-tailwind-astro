@@ -9,9 +9,8 @@ interface Props {
 const { amount, iconName, title, isLeft } = Astro.props;
 ---
 
-<li class='text-[1.8rem] flex items-center gap-[1.6rem]'>
-  <ion-icon class='h-[2.4rem] w-[2.4rem] text-[#e67e22]' name={`${iconName}`}
-  ></ion-icon>
+<li class='meal-attribute'>
+  <ion-icon class='meal-icon' name={`${iconName}`}></ion-icon>
   <span>
     {isLeft && <strong>{`${amount} `}</strong>}
     {title}
