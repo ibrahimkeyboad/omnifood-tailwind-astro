@@ -1,10 +1,10 @@
 ---
-import MealCard from './MealCard.astro';
-const meals = [
+import MealCard, { type MealProps } from './MealCard.astro';
+const meals: MealProps[] = [
   {
     image: {
       src: '/img/meals/meal-1.jpg',
-      alt: 'img/meals/meal-1.jpg',
+      alt: 'Japanese Gyozas',
     },
     mealTags: ['Vegetarian'],
     mealTitle: 'Japanese Gyozas',

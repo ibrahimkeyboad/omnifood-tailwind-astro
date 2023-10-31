@@ -1,24 +1,22 @@
 ---
 import MealAttribute from './MealAttribute.astro';
 
-export interface Props {
+export interface MealProps {
   image: {
     src: string;
     alt: string;
   };
   mealTags: string[];
   mealTitle: string;
-  mealAttributes: [
-    {
-      title: string;
-      amount: number;
-      isLeft: boolean;
-      iconName: string;
-    },
-  ];
+  mealAttributes: {
+    amount: number;
+    title: string;
+    isLeft: boolean;
+    iconName: string;
+  }[];
 }
 
-const { mealAttributes, mealTags, mealTitle, image } = Astro.props;
+const { mealAttributes, mealTags, mealTitle, image } = Astro.props as MealProps;
 ---
 
 <div class='meal'>
