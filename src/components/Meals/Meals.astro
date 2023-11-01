@@ -1,10 +1,13 @@
 ---
 import Diets from './Diets.astro';
+
+import meal1 from '../../img/meals/meal-1.jpg'
+import meal2 from '../../img/meals/meal-2.jpg'
 import MealCard, { type MealProps } from './MealCard.astro';
 const meals: MealProps[] = [
   {
     image: {
-      src: '/img/meals/meal-1.jpg',
+      src: meal1,
       alt: 'Japanese Gyozas',
     },
     mealTags: ['Vegetarian'],
@@ -32,7 +35,7 @@ const meals: MealProps[] = [
   },
   {
     image: {
-      src: '/img/meals/meal-2.jpg',
+      src: meal2,
       alt: 'Avocado Salad',
     },
     mealTags: ['Vegan', 'Paleo'],
