@@ -2,53 +2,27 @@
 import { Image } from 'astro:assets';
 ---
 
-<section class='bg-[#fdf2ed] pt-[4.8rem] pb-[9.6rem]'>
-  <div
-    class='max-w-[130rem] m-auto px-[3.2rem] grid grid-cols-2 gap-[9.6rem] items-center'
-  >
+<section class='section-hero'>
+  <div class='hero'>
     <div class='hero-text-box'>
       <h1 class='heading-primary'>
         A healthy meal delivered to your door, every single day
       </h1>
-      <p class='text-[2rem] leading-[1.6] mb-[4.8rem]'>
+      <p class='hero-description'>
         The smart 365-days-per-year food subscription that will make you eat
         healthy again. Tailored to your personal tastes and nutritional needs.
       </p>
       <a href='#cta' class='btn btn--full margin-right-sm'>Start eating well</a>
 
       <a href='#how' class='btn btn--outline'>Learn more &darr;</a>
-      <div class='flex items-center gap-[1.6rem] mt-[8rem]'>
-        <div class='flex'>
-          <img
-            class='h-[4.8rem] w-[4.8rem] rounded-full -mr-[1.6rem] border-[#fdf2e9] border-[3px]'
-            src='img/customers/customer-1.jpg'
-            alt='Customer photo'
-          />
-          <img
-            class='h-[4.8rem] w-[4.8rem] rounded-full -mr-[1.6rem] border-[#fdf2e9] border-[3px]'
-            src='img/customers/customer-2.jpg'
-            alt='Customer photo'
-          />
-          <img
-            class='h-[4.8rem] w-[4.8rem] rounded-full -mr-[1.6rem] border-[#fdf2e9] border-[3px]'
-            src='img/customers/customer-3.jpg'
-            alt='Customer photo'
-          />
-          <img
-            class='h-[4.8rem] w-[4.8rem] rounded-full -mr-[1.6rem] border-[#fdf2e9] border-[3px]'
-            src='img/customers/customer-4.jpg'
-            alt='Customer photo'
-          />
-          <img
-            class='h-[4.8rem] w-[4.8rem] rounded-full -mr-[1.6rem] border-[#fdf2e9] border-[3px]'
-            src='img/customers/customer-5.jpg'
-            alt='Customer photo'
-          />
-          <img
-            class='h-[4.8rem] w-[4.8rem] rounded-full -mr-[1.6rem] border-[#fdf2e9] border-[3px]'
-            src='img/customers/customer-6.jpg'
-            alt='Customer photo'
-          />
+      <div class='delivered-meals'>
+        <div class='delivered-imgs'>
+          <img src='img/customers/customer-1.jpg' alt='Customer photo' />
+          <img src='img/customers/customer-2.jpg' alt='Customer photo' />
+          <img src='img/customers/customer-3.jpg' alt='Customer photo' />
+          <img src='img/customers/customer-4.jpg' alt='Customer photo' />
+          <img src='img/customers/customer-5.jpg' alt='Customer photo' />
+          <img src='img/customers/customer-6.jpg' alt='Customer photo' />
         </div>
         <p class='text-[1.8rem] font-semibold'>
           <span class='text-[#df711f] font-bold'>250,000+</span> meals delivered
