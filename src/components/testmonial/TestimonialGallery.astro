@@ -1,49 +1,31 @@
 ---
+import {Image} from 'astro:assets'
+import gallery1 from '../../img/gallery/gallery-1.jpg'
+import gallery2 from '../../img/gallery/gallery-2.jpg'
+import gallery3 from '../../img/gallery/gallery-3.jpg'
+import gallery4 from '../../img/gallery/gallery-4.jpg'
+import gallery5 from '../../img/gallery/gallery-5.jpg'
+import gallery6 from '../../img/gallery/gallery-6.jpg'
+import gallery7 from '../../img/gallery/gallery-7.jpg'
+import gallery8 from '../../img/gallery/gallery-8.jpg'
+import gallery9 from '../../img/gallery/gallery-9.jpg'
+import gallery10 from '../../img/gallery/gallery-10.jpg'
+import gallery11 from '../../img/gallery/gallery-11.jpg'
+import gallery12 from '../../img/gallery/gallery-12.jpg'
 const images=[
- ,
-  'img/gallery/gallery-1.jpg'
 
- ,
-  'img/gallery/gallery-2.jpg'
-
- ,
- 
-  'img/gallery/gallery-3.jpg'
-
- ,
- 
-  'img/gallery/gallery-4.jpg'
-
- ,
- 
-  'img/gallery/gallery-5.jpg'
-
- ,
- 
-  'img/gallery/gallery-6.jpg'
-
- ,
- 
-  'img/gallery/gallery-7.jpg'
-
- ,
- 
-  'img/gallery/gallery-8.jpg'
-
- ,
- 
-  'img/gallery/gallery-9.jpg'
-,
- 
-  'img/gallery/gallery-10.jpg'
-,
- 
-  'img/gallery/gallery-11.jpg'
-,
- 
-  'img/gallery/gallery-12.jpg'
-
-  
+gallery1,
+gallery2,
+gallery3,
+gallery4,
+gallery5, 
+gallery6,
+gallery7,
+gallery8,
+gallery9,
+gallery10,
+gallery11,
+gallery12,
 
 ]
 ---
@@ -51,7 +33,9 @@ const images=[
 <div class='grid grid-cols-3 gap-[1.6rem] p-[1.6rem]'>
 
   {images.map(img=>  <figure class='overflow-hidden'>
-    <img
+    <Image
+    width={400}
+    height={400}
       class='block w-full transition-all duration-75'
       src={img}
       alt='Photo of beautifully arranged food'

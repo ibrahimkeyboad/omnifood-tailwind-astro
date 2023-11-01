@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 interface Props {
   image: {
     src: string;
@@ -13,7 +14,9 @@ const { desc, image, name } = Astro.props;
 ---
 
 <figure class='testimonial'>
-  <img
+  <Image
+    width={60}
+    height={80}
     class='w-[6rem] rounded-full mb-[1.2rem]'
     alt={image.alt}
     src={image.src}

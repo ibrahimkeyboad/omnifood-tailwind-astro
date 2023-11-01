@@ -1,5 +1,6 @@
 ---
 import MealAttribute from './MealAttribute.astro';
+import { Image } from 'astro:assets';
 
 export interface MealProps {
   image: {
@@ -20,7 +21,13 @@ const { mealAttributes, mealTags, mealTitle, image } = Astro.props as MealProps;
 ---
 
 <div class='meal'>
-  <img src={image.src} class='meal-img' alt={image.alt} />
+  <Image
+    width={400}
+    height={500}
+    src={image.src}
+    class='meal-img'
+    alt={image.alt}
+  />
   <div class='meal-content'>
     <div class='meal-tags'>
       {
@@ -105,8 +112,6 @@ const { mealAttributes, mealTags, mealTitle, image } = Astro.props as MealProps;
     font-weight: 600;
     margin-bottom: 3.2rem;
   }
-
- 
 
   .meal-img {
     width: 100%;
