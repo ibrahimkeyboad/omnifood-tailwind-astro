@@ -105,6 +105,35 @@ import { Image } from 'astro:assets';
     color: #cf711f;
     font-weight: 700;
   }
+
+  @media (max-width: 84em) {
+    .hero {
+      max-width: 120rem;
+    }
+  }
+
+  @media (max-width: 75em) {
+    .hero {
+      gap: 4.8rem;
+    }
+
+    @media (max-width: 59em) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 0 8rem;
+        gap: 6.4rem;
+      }
+
+      .hero-text-box,
+      .hero-img-box {
+        text-align: center;
+      }
+
+      .hero-img {
+        width: 60%;
+      }
+    }
+  }
 </style>
 
 <script>
