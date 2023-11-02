@@ -22,6 +22,8 @@ const { mealAttributes, mealTags, mealTitle, image } = Astro.props as MealProps;
 
 <div class='meal'>
   <Image
+    decoding='async'
+    loading='lazy'
     width={400}
     height={500}
     src={image.src}

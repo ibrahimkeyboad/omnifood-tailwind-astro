@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import logo from '../img/omnifood-logo.png'
+import logo from '../img/omnifood-logo.png';
 ---
 
 <header class='header'>
@@ -10,6 +10,8 @@ import logo from '../img/omnifood-logo.png'
       height={100}
       class='logo'
       alt='Omnifood logo'
+      decoding='async'
+      loading='lazy'
       src={logo}
     />
   </a>

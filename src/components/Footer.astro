@@ -1,12 +1,21 @@
 ---
-import {Image} from 'astro:assets'
-import logo from '../img/omnifood-logo.png'
+import { Image } from 'astro:assets';
+import logo from '../img/omnifood-logo.png';
 ---
+
 <footer class='footer'>
   <div class='container grid grid--footer'>
     <div class='logo-col'>
       <a href='#' class='footer-logo'>
-        <Image width={100} height={100} class='logo' alt='Omnifood logo' src={logo} />
+        <Image
+          width={100}
+          height={100}
+          decoding='async'
+          loading='lazy'
+          class='logo'
+          alt='Omnifood logo'
+          src={logo}
+        />
       </a>
 
       <ul class='social-links'>

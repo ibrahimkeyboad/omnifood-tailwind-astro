@@ -1,14 +1,14 @@
 ---
 import { Image } from 'astro:assets';
 
-import customer1 from  '../img/customers/customer-1.jpg'
-import customer2 from  '../img/customers/customer-2.jpg'
-import customer3 from  '../img/customers/customer-3.jpg'
-import customer4 from  '../img/customers/customer-4.jpg'
-import customer5 from  '../img/customers/customer-5.jpg'
-import customer6 from  '../img/customers/customer-6.jpg'
-import heroWbp from  '../img/hero-min.png'
-import hero from  '../img/hero.webp'
+import customer1 from '../img/customers/customer-1.jpg';
+import customer2 from '../img/customers/customer-2.jpg';
+import customer3 from '../img/customers/customer-3.jpg';
+import customer4 from '../img/customers/customer-4.jpg';
+import customer5 from '../img/customers/customer-5.jpg';
+import customer6 from '../img/customers/customer-6.jpg';
+import heroWbp from '../img/hero-min.png';
+import hero from '../img/hero.webp';
 ---
 
 <section class='section-hero'>
@@ -27,36 +27,48 @@ import hero from  '../img/hero.webp'
       <div class='delivered-meals'>
         <div class='delivered-imgs'>
           <Image
+            decoding='async'
+            loading='lazy'
             width={100}
             height={100}
             src={customer1}
             alt='Customer photo'
           />
           <Image
+            decoding='async'
+            loading='lazy'
             width={100}
             height={100}
             src={customer2}
             alt='Customer photo'
           />
           <Image
+            decoding='async'
+            loading='lazy'
             width={100}
             height={100}
             src={customer3}
             alt='Customer photo'
           />
           <Image
+            decoding='async'
+            loading='lazy'
             width={100}
             height={100}
             src={customer4}
             alt='Customer photo'
           />
           <Image
+            decoding='async'
+            loading='lazy'
             width={100}
             height={100}
             src={customer5}
             alt='Customer photo'
           />
           <Image
+            decoding='async'
+            loading='lazy'
             width={100}
             height={100}
             src={customer6}
@@ -75,10 +87,12 @@ import hero from  '../img/hero.webp'
         <source srcset={hero} type='image/png' />
 
         <Image
+          decoding='async'
+          loading='lazy'
           width={600}
           height={600}
-          loading="lazy"
-          decoding="async"
+          loading='lazy'
+          decoding='async'
           src={hero}
           alt='Woman enjoying food, meals in storage container, and food bowls on a table'
         />
