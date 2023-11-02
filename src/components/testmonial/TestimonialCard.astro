@@ -17,12 +17,34 @@ const { desc, image, name } = Astro.props;
   <Image
     width={60}
     height={80}
-    class='w-[6rem] rounded-full mb-[1.2rem]'
+    class='testimonial-img'
     alt={image.alt}
     src={image.src}
   />
-  <blockquote class='text-[1.8rem] leading-[1.8] mb-[1.6rem]'>
+  <blockquote class='testimonial-text'>
     {desc}
   </blockquote>
-  <p class='text-[1.6rem] text-[#6f6f6f]'>&mdash; {name}</p>
+  <p class='testimonial-name'>&mdash; {name}</p>
 </figure>
+
+
+<style>
+  
+.testimonial-img {
+  width: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+
+.testimonial-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+}
+
+.testimonial-name {
+  font-size: 1.6rem;
+  color: #6f6f6f;
+}
+
+</style>

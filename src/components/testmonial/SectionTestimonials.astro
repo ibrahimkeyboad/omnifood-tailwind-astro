@@ -4,11 +4,22 @@ import TestimonialGallery from './TestimonialGallery.astro';
 ---
 
 <section
-  class='bg-[#fdf2e9] grid grid-cols-[55fr_45fr] items-center'
-  id='testimonials'
+  class='section-testimonials'
 >
   <Testimonial />
   <TestimonialGallery />
 </section>
 <!-- src="img/gallery/gallery-12.jpg" alt="Photo of beautifully arranged food" />
 ranged food" /> -->
+
+
+<style>
+  
+.section-testimonials {
+  background-color: #fdf2e9;
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  align-items: center;
+}
+
+</style>

@@ -1,5 +1,9 @@
 ---
 import Steps from './Steps.astro';
+
+import step1 from '../img/app/app-screen-1.png'
+import step2 from '../img/app/app-screen-2.png'
+import step3 from '../img/app/app-screen-3.png'
 const steps = [
   {
     stepNumber: '01',
@@ -8,6 +12,7 @@ const steps = [
         create a 100% personalized weekly meal plan just for you. It makes sure
         you get all the nutrients and vitamins you need, no matter what diet you
         follow!`,
+        img:step1
   },
   {
     stepNumber: '02',
@@ -15,15 +20,21 @@ const steps = [
     description: `  Once per week, approve the meal plan generated for you by Omnifood AI.
         You can change ingredients, swap entire meals, or even add your own
         recipes.`,
+        img:step2
+
   },
   {
     stepNumber: '03',
     title: 'Receive meals at convenient time',
-    description: `  Best chefs in town will cook your selected meal every day, and we will
+    description: `Best chefs in town will cook your selected meal every day, and we will
         deliver it to your door whenever works best for you. You can change
         delivery schedule and address daily!`,
+        img:step3
   },
 ];
+
+console.log(steps)
+
 ---
 
 <section class='section-how' id='how'>
@@ -41,6 +52,7 @@ const steps = [
           title={step.title}
           stepNumber={step.stepNumber}
           description={step.description}
+          img={step.img.src}
         />
       ))
     }

@@ -4,9 +4,10 @@ interface Props {
   title: string;
   stepNumber: string;
   description: string;
+  img: string;
 }
 
-const { title, stepNumber, description } = Astro.props;
+const { title, stepNumber, description, img } = Astro.props;
 
 const isTrue = stepNumber === '02';
 ---
@@ -15,7 +16,7 @@ const isTrue = stepNumber === '02';
   isTrue && (
     <div class='step-img-box'>
       <img
-        src='/img/app/app-screen-2.png'
+        src={img}
         class='step-img'
         alt='iPhone app
   meal approving plan screen'
@@ -38,7 +39,7 @@ const isTrue = stepNumber === '02';
   !isTrue && (
     <div class='step-img-box'>
       <img
-        src='/img/app/app-screen-2.png'
+        src={img}
         class='step-img'
         alt='iPhone app
   meal approving plan screen'

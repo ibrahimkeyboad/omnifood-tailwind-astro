@@ -30,13 +30,12 @@ gallery12,
 ]
 ---
 
-<div class='grid grid-cols-3 gap-[1.6rem] p-[1.6rem]'>
+<div class='gallery'>
 
-  {images.map(img=>  <figure class='overflow-hidden'>
+  {images.map(img=>  <figure class='gallery-item'>
     <Image
     width={400}
     height={400}
-      class='block w-full transition-all duration-75'
       src={img}
       alt='Photo of beautifully arranged food'
     />
@@ -48,3 +47,29 @@ gallery12,
 
  
 </div>
+
+
+<style>
+  
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  padding: 1.6rem;
+}
+
+.gallery-item {
+  overflow: hidden;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  transition: all 0.4s;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+
+</style>

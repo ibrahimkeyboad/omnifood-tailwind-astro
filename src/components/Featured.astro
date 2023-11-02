@@ -8,49 +8,78 @@ import forbes from '../img/logos/forbes.png'
 import usaToday from '../img/logos/usa-today.png'
 ---
 
-<section class='pt-[4.8rem] pb-[3.2rem]'>
+<section class='section-featured'>
   <div class='container'>
     <h2
-      class='text-[1.4rem] uppercase tracking-[0.75px] font-medium text-center mb-[2.4rem] text-[#888]'
+      class='heading-featured-in'
     >
       As featured in
     </h2>
-    <div class='flex justify-around'>
+    <div class='logos'>
       <Image
-        width={100}
-        height={100}
-        class='h-[3.2rem] brightness-0 opacity-50'
+        width={200}
+        height={32}
+     
         src={techcrunch}
         alt='Techcrunch logo'
       />
       <Image
-        width={100}
-        height={100}
-        class='h-[3.2rem] brightness-0 opacity-50'
+        width={200}
+        height={32}
+     
         src={businessInsider}
         alt='Business Insider logo'
       />
       <Image
-        width={100}
-        height={100}
-        class='h-[3.2rem] brightness-0 opacity-50'
+        width={200}
+        height={32}
+     
         src={theNewYorkTimes}
         alt='The New York Times logo'
       />
       <Image
-        width={100}
-        height={100}
-        class='h-[3.2rem] brightness-0 opacity-50'
+        width={200}
+        height={32}
+     
         src={forbes}
         alt='Forbes logo'
       />
       <Image
-        width={100}
-        height={100}
-        class='h-[3.2rem] brightness-0 opacity-50'
+        width={200}
+        height={32}
+     
         src={usaToday}
         alt='USA Today logo'
       />
     </div>
   </div>
 </section>
+
+
+<style>
+  
+.section-featured {
+  padding: 4.8rem 0 3.2rem 0;
+}
+
+.heading-featured-in {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 2.4rem;
+  color: #888;
+}
+
+.logos {
+  display: flex;
+  justify-content: space-around;
+}
+
+.logos img {
+  height: 3.2rem;
+  filter: brightness(0);
+  opacity: 50%;
+}
+</style>

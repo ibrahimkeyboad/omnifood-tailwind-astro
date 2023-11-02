@@ -7,7 +7,8 @@ import customer3 from  '../img/customers/customer-3.jpg'
 import customer4 from  '../img/customers/customer-4.jpg'
 import customer5 from  '../img/customers/customer-5.jpg'
 import customer6 from  '../img/customers/customer-6.jpg'
-import hero from  '../img/hero-min.png'
+import heroWbp from  '../img/hero-min.png'
+import hero from  '../img/hero.webp'
 ---
 
 <section class='section-hero'>
@@ -70,14 +71,15 @@ import hero from  '../img/hero-min.png'
     </div>
     <div class='hero-img-box'>
       <picture>
-        <source srcset='/img/hero.webp' type='image/webp' />
-        <source srcset='/img/hero-min.png' type='image/png' />
+        <source srcset={heroWbp} type='image/webp' />
+        <source srcset={hero} type='image/png' />
 
         <Image
           width={600}
           height={600}
+          loading="lazy"
+          decoding="async"
           src={hero}
-          class='w-full'
           alt='Woman enjoying food, meals in storage container, and food bowls on a table'
         />
       </picture>

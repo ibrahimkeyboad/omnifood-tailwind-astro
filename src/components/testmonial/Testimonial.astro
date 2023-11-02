@@ -45,11 +45,11 @@ const testimonials = [
 ];
 ---
 
-<div class='p-[9.6rem]'>
+<div class='testimonials-container'>
   <span class='subheading'>Testimonials</span>
   <h2 class='heading-secondary'>Once you try it, you can't go back</h2>
 
-  <div class='grid grid-cols-2'>
+  <div class='testimonials'>
     {
       testimonials.map((item) => (
         <TestimonialCard
@@ -61,3 +61,19 @@ const testimonials = [
     }
   </div>
 </div>
+
+
+<style>
+  
+.testimonials-container {
+  padding: 9.6rem;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 4.8rem;
+  column-gap: 8rem;
+}
+
+</style>
